@@ -3,4 +3,4 @@ Astro-limepy1.1 as of Oct 10, 2024, is only compatible with the earliest scipy r
 
 The changes made are the following:
 
-*A
+* A
