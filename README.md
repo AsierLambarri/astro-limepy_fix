@@ -3,4 +3,9 @@ Astro-limepy1.1 as of Oct 10, 2024, is only compatible with the earliest scipy r
 
 The changes made are the following:
 
-* Changed 
+* Changed **from scipy.integrate import simps** to **from scipy.integrate import simpson as simps**
+* Changed **scipy.random** for **numpy.random**
+* Fixed the identation error.
+* Changed line XXX of `sample.py` from **self.seed=199; random.seed(self.seed)** to **random.seed()** so that each new sampling is done with a different seed.
+
+To fix these issues, copy the `limepy.py`, `sample.py` and `spes.py` directly into the limepy instalation folder after it has been installed.
