@@ -47,7 +47,7 @@ class sample:
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-        random.seed(self.seed)
+        random.seed()
 
         if (mod.multi):
             #  N is recalculated in case of multi mass
