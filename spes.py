@@ -175,36 +175,36 @@ class spes:
         if kwargs is not None:
             for key, value in kwargs.items():
                 # Check for scaling input (similar to LIMEPY)
-                if key is 'G':
+                if key == 'G':
                     self._GS, self.scale = value, True
-                elif key is 'M':
+                elif key == 'M':
                     self._MS, self.scale = value, True
-                elif key is 'r0':
+                elif key == 'r0':
                     if self.scale_radius is None:
                         self._RS,self.scale_radius,self.scale = value,'r0', True
                     else:
                         error="Can not set scale radius to r0,already set to %s"
                         raise ValueError(error%self.scale_radius)
-                elif key is 'rh':
+                elif key == 'rh':
                     if self.scale_radius is None:
                         self._RS, self.scale_radius, self.scale=value,'rh', True
                     else:
                         error="Can not set scale radius to rh,already set to %s"
                         raise ValueError(error%self.scale_radius)
-                elif key is 'rv':
+                elif key == 'rv':
                     if self.scale_radius is None:
                         self._RS, self.scale_radius, self.scale=value,'rv', True
                     else:
                         error="Can not set scale radius to rv,already set to %s"
                         raise ValueError(error%self.scale_radius)
-                elif key is 'rt':
+                elif key == 'rt':
                     if self.scale_radius is None:
                         self._RS, self.scale_radius, self.scale=value,'rt', True
                     else:
                         error="Can not set scale radius to rt,already set to %s"
                         raise ValueError(error%self.scale_radius)
                 # SPES specific checks
-                elif key is 'C' :
+                elif key == 'C' :
                     error="Can not set C, use B & eta. C and fpe are computed internally"
                     raise ValueError(error)
                 else:
